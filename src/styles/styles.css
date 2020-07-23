@@ -25,7 +25,6 @@ a{
     padding: 5px;
     /* background-color: grey; */
     
-    
 }
 .slides{
     /* scroll-snap-align: start; */
@@ -39,8 +38,14 @@ a{
     flex-shrink: 0;
     background-color: teal;
     position: relative;
+    background-size: cover;
     
     
+}
+@media only screen and (max-width: 568px) {
+    .slides{
+        width: 180px;
+    }
 }
 .genre-slides{
     scroll-snap-align: start;
@@ -55,13 +60,14 @@ a{
     border-radius: 5px;
     position: relative;
 }
+
 .genre-slider{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    
+    background-size: cover;
 }
 /* .slider::-webkit-scrollbar-button{
 } */
@@ -76,9 +82,12 @@ a{
 }
 
 .movie-poster{
-    height: 250px;
-    width: 190px;
+    /* height: 250px; */
+    /* width: 190px; */
+    width: 100%;
+    background-size: contain;
     border-radius: 5px;
+    /* object-fit: fill */
 }
 .title{
     position: absolute;
