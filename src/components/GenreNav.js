@@ -7,7 +7,7 @@ import GenreMovieHeader from './GenreNavHeader'
 class GenreNav extends React.Component{
     state={movies:[]}
     componentDidMount = async () =>{
-        const response = await axios('http://localhost:3001/movies')
+        const response = await axios('https://quickmovies.herokuapp.com/movies')
         this.setState({movies:response.data})
     }
 

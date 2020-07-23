@@ -7,8 +7,8 @@ class Genre extends React.Component{
     state={movies:[]}
     componentDidMount = async() =>{
         const BASE_URL = process.env.BASE_URL || 'https://quickmovies.herokuapp.com/'
-        const Localhost = 'http://localhost:3001/movies/'
-        const response = await axios(Localhost+this.props.genre)
+        // const Localhost = 'http://localhost:3001/movies/'
+        const response = await axios(BASE_URL+'movies/'+this.props.genre)
         const movies = response.data.filter((movie)=>{
             return movie.genre.toLowerCase().includes('action')
         })
