@@ -2,7 +2,7 @@
   "name": "quickmovies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rootrsk.github.io/react-quickmovies",
+  "homepage": "http://rootrsk.github.io/react-quickmovies",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
