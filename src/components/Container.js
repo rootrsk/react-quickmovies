@@ -11,12 +11,11 @@ const Container = (props)=>{
                 <Link 
                     
                     to={{
-                        pathname: '/movie/id',
+                        pathname: '/movie/'+props.movie.title,
                         state:props.movie
                     }}
                     movie={props.movie}  
-                    name='ravi'
-                >   <img className='movie-poster' src={props.movie.poster} /></Link>
+                >   <img className='movie-poster' src={props.movie.poster}alt='img' /></Link>
             </div>
         </div>
     )
