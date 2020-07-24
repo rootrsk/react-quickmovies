@@ -14,15 +14,17 @@ class SingleMovie extends React.Component{
                 genre: this.props.location.state.genre,
                 imdb: this.props.location.state.imdb,
                 category:this.props.location.state.category ,
-                year: this.props.location.state.year,
+                year: this.props.location.state.release_date,
                 starcast : this.props.location.state.starcast,
                 director: this.props.location.state.director,
                 description: this.props.location.state.description,
                 poster: this.props.location.state.poster,
-                screenshot : this.props.location.state.screenshot
+                screenshot : this.props.location.state.screenshot,
+                download_link:this.props.location.state.download_link,
+                torrent_link:this.props.location.state.torrent_link,
+                stream_link:this.props.location.state.stream_link
             })
         }
-        console.log(this.state)
     }
 
     render(){
@@ -38,6 +40,7 @@ class SingleMovie extends React.Component{
                     > &#171;</button>
                     <h1 className='des_movie-title'>{this.state.title}</h1>
                     <MoviePosterRender poster={this.state.poster}/>
+
                     <div className='des_movie-details'>
                         <p>IMDb Rating : {this.state.imdb} </p>
                         <p>Genere : {this.state.genre} </p>
@@ -45,12 +48,13 @@ class SingleMovie extends React.Component{
                         <p>Star Cast : {this.state.starcast}</p>
                         <p>Director: {this.state.director}</p>
                         <p>Description : {this.state.description}</p>
-                        
                     </div>
-                    <div>
-                        {}
+                    
+                    <div className='download-link'>
+                        {this.state.download_link && <a href={this.state.download_link}>Download Link</a>}
+                        {this.state.torrent_link && <a href={this.state.torrent_link}>Torrent Link</a>}
+                        {this.state.stream_link && <a href={this.state.stream_link}>Stream Link</a>}
                     </div>
-                    {/* <MovieScreenShotRender screenshot={this.state.poster} /> */}
                 </div>
                 
                 

@@ -82,10 +82,11 @@ a{
 }
 
 .movie-poster{
-    /* height: 250px; */
+    height: 250px;
     /* width: 190px; */
     width: 100%;
-    background-size: contain;
+    /* height: 100%; */
+    background-size: cover;
     border-radius: 5px;
     /* object-fit: fill */
 }
@@ -179,9 +180,19 @@ a{
 }
 input{
     display: block;
+    margin: 5px 0px 0px 0px;
 }
 
+.admin-movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.bottom{
+    bottom: 3px;
+    position: absolute;
+}
 
 
 
