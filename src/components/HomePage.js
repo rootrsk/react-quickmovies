@@ -22,8 +22,7 @@ class HomePage extends React.Component{
                 <Genre genre={'Romance'} key={Math.random()*100}/>
                 <Genre genre={'Sci-Fi'} key={Math.random()*100}/>
                 <Genre genre={'Thriller'} key={Math.random()*100}/>
-                <GenreTest genre={'Drama'} />
-                <GenreTest genre='Thriller'/>
+                
             </div>
         )
     }

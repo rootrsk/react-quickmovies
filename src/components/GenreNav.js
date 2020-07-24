@@ -18,8 +18,7 @@ class GenreNav extends React.Component{
                 <div className='genre-slider'>
                     {this.state.movies.map((movie)=>{
                         return(
-                            // <div className='slides'> </div>
-                            <Container movie={movie} key={movie.id} />
+                            <Container movie={movie} key={movie._id} />
                         )
                     })}
                 </div>
