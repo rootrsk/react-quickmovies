@@ -16,7 +16,7 @@ class Genre extends React.Component{
             <div className='container'>
                 <div className='slider-header'>
                     <div className='genere'>{this.props.genre}</div>
-                    <Link to='/genre' className='view-more'>View More</Link>
+                    <Link to={'/genre/'+this.props.genre.toLowerCase()} className='view-more'>View More</Link>
                 </div>
                     <div className='slider'>
                         {this.state.movies.map((movie)=>{

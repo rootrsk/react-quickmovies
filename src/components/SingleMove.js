@@ -29,15 +29,17 @@ class SingleMovie extends React.Component{
 
     render(){
         return(
-            <div className='single-movie'>
-                <div className='single-movie_details'>
-
+            <div className='single-movie_main-div'>
+                <div>
                     <button 
                         className={'back-button'}
                         onClick={()=>{
                             window.history.back()
                         }}
                     > &#171;</button>
+                </div> 
+
+                <div className='single-movie_details'>
                     <h1 className='des_movie-title'>{this.state.title}</h1>
                     <MoviePosterRender poster={this.state.poster}/>
 
@@ -67,7 +69,7 @@ class SingleMovie extends React.Component{
 const MoviePosterRender = (props) =>{
     return(
         <div className='des_movie-poster'>
-            <img className='img' src={props.poster} alt='movie-poster' />
+            <img  src={props.poster} alt='movie-poster' />
         </div>
     )
 }

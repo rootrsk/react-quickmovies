@@ -7,14 +7,29 @@ import GenreMovieHeader from './GenreNavHeader'
 class GenreNav extends React.Component{
     state={movies:[]}
     componentDidMount = async () =>{
-        const response = await axios('https://quickmovies.herokuapp.com/movies')
-        this.setState({movies:response.data})
+        if(this.props){
+            const response = await axios({
+                url: 'https://quickmovies.herokuapp.com/movies/'+this.props.match.params.genre,
+            })
+            this.setState({movies:response.data})
+        } else {
+            
+
+        }
+        
     }
 
     render(){
         return(
-            <div>
-                <GenreMovieHeader />
+            <div className='genre-main_div'>
+                <div>
+                    <button 
+                        className={'back-button'}
+                        onClick={()=>{
+                            window.history.back()
+                        }}
+                    > &#171;</button>
+                </div>
                 <div className='genre-slider'>
                     {this.state.movies.map((movie)=>{
                         return(

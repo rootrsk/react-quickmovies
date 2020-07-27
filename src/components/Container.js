@@ -5,8 +5,7 @@ import { Link, Route } from 'react-router-dom';
 const Container = (props)=>{
     return(
         <div className='slides'>
-            <div>
-                {/* <img className='movie-poster' src={props.movie.poster} /> */}
+            <div className='slides_inner-div'>
                 <div className='title'>{props.movie.title} </div>
                 <Link 
                     

@@ -10,9 +10,7 @@ class MovieForm extends React.Component{
             const response = await axios({
                 url:'https://quickmovies.herokuapp.com/movie/'+this.props.id,
             })
-            console.log(response)
             this.setState(response.data)
-
         }
     }
     onTitleChange = (e) =>{
@@ -91,10 +89,11 @@ class MovieForm extends React.Component{
             console.log(this.props.Operation)
             const response = await axios({
                 url:'https://quickmovies.herokuapp.com/movie',
+                // url:'http://localhost:3001/movie',
                 method: 'post',
                 data:formData,
                 headers: {
-                    'Content-Type': 'multipart/form-data; boundary=${form._boundary}'
+                    'Content-Type': `multipart/form-data; boundary=${formData._boundary}`
                 }
             })
             console.log(response)
@@ -114,6 +113,7 @@ class MovieForm extends React.Component{
         if(this.props.Operation==='delete'){
             const response = await axios({
                 url:'https://quickmovies.herokuapp.com/movie/'+this.state._id,
+
                 method: 'delete'
             })
         }
