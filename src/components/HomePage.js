@@ -10,12 +10,12 @@ class HomePage extends React.Component{
         return(
             <div>
                 <Genre genre={'Action'} key={Math.random()*100}/>
-                <Genre genre={'Advanture'} key={Math.random()*100}/>
+                <Genre genre={'Adventure'} key={Math.random()*100}/>
                 <Genre genre={'Comedy'} key={Math.random()*100}/>
                 <Genre genre={'Crime'} key={Math.random()*100}/>
                 <Genre genre={'Drama'} key={Math.random()*100}/>
                 <Genre genre={'Fantasy'} key={Math.random()*100}/>
-                <Genre genre={'Historical'} key={Math.random()*100}/>
+                <Genre genre={'History'} key={Math.random()*100}/>
                 <Genre genre={'Horror'} key={Math.random()*100}/>
                 <Genre genre={'Mystery'} key={Math.random()*100}/>
                 <Genre genre={'Romance'} key={Math.random()*100}/>

@@ -354,17 +354,21 @@ input{
     width: 80%;
     margin: auto;
     background: #2a976b;
+    overflow: hidden;
     
 }
 .form input,textarea,select{
     background: #145a3e;
     width: 100%;
+    
     border:none;
     margin-bottom: 5px;
+    padding: 7px;
+    border-radius: 3px;
 }
 
 
 select,textarea{
     display: block;
-    height: 220px;
+    height: 100px;
 }

@@ -197,12 +197,12 @@ class MovieForm extends React.Component{
                     >
                         <option>Action</option>
                         <option>Adult</option>
-                        <option>Advanture</option>
+                        <option>Adventure</option>
                         <option>Comedy</option>
                         <option>Crime</option>
                         <option>Drama</option>
                         <option>Fantasy</option>
-                        <option>Historical</option>
+                        <option>History</option>
                         <option>Horror</option>
                         <option>Mystery</option>
                         <option>Romance</option>
@@ -243,7 +243,7 @@ class MovieForm extends React.Component{
                     />
                     <button>Submit</button>
                 </form>
-                {this.state.Poster && <img src={this.state.Poster}alt='img' />}
+                {this.state.Poster && <img src={this.state.Poster} className='des_movie-poster' alt='img' />}
                 {this.state.poster && <img src={this.state.poster} alt='img' />}
                 
                 <div>
