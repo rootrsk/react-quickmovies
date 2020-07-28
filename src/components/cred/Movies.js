@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Axios from 'axios';
 
 class Movies extends React.Component{
@@ -31,7 +31,7 @@ const Container = (props)=>{
                 
                 
             </div>
-            <img src={props.movie.poster} alt='poster' className='img' />
+            <img src={props.movie.Poster} alt='poster' className='img' />
             <div className='bottom'>
                 <NavLink to={'crud/delete/'+props.movie._id} >Delete</NavLink>
                 <NavLink to={'crud/update/'+props.movie._id} >Update</NavLink>

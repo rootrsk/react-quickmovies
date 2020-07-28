@@ -1,6 +1,5 @@
 import React from 'react';
 import MovieForm from './MovieForm';
-import axios from 'axios'
 
 const CreateMovie = (props) => {
     return(

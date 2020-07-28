@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Container = (props)=>{
@@ -7,6 +7,7 @@ const Container = (props)=>{
         <div className='slides'>
             <div className='slides_inner-div'>
                 <div className='title'>{props.movie.title} </div>
+                {console.log(props.movie)}
                 <Link 
                     
                     to={{
@@ -14,7 +15,7 @@ const Container = (props)=>{
                         state:props.movie
                     }}
                     movie={props.movie}  
-                >   <img className='movie-poster' src={props.movie.poster}alt='img' /></Link>
+                >   <img className='movie-poster' src={props.movie.Poster}alt='img' /></Link>
             </div>
         </div>
     )

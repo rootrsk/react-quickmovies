@@ -119,7 +119,8 @@ input{
 }
 @media only screen and (max-width: 608px) {
     .slides{
-        width: 170px;
+        width: 150px;
+        height: 220px;
     }
 }
 .slider::-webkit-scrollbar-thumb {

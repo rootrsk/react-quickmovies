@@ -13,6 +13,26 @@ class MovieForm extends React.Component{
             this.setState(response.data)
         }
     }
+    onFindMovieDetails = async(e) =>{
+        const i = e.target.value
+        const response = await axios({
+            url:`http://www.omdbapi.com/?i=${i}&apikey=ce5aafa9`
+        })
+        if(response.data.Title){
+            this.setState({
+                title : response.data.Title,
+                imdb : response.data.imdbRating,
+                starcast : response.data.Actors,
+                genre : response.data.Genre,
+                release_date : response.data.Released,
+                director : response.data.Director,
+                description : response.data.Plot,
+                Poster : response.data.Poster
+            })
+
+            console.log(this.state)
+        }
+    }
     onTitleChange = (e) =>{
         const title = e.target.value
         this.setState({title})
@@ -76,6 +96,7 @@ class MovieForm extends React.Component{
         formData.append('category',this.state.category)
         formData.append('release_date',this.state.release_date)
         formData.append('download_link',this.state.download_link)
+        formData.append('Poster',this.state.Poster)
         console.log(this.state)
         if(this.state.poster){
             formData.append('poster',this.state.poster)
@@ -93,7 +114,7 @@ class MovieForm extends React.Component{
                 method: 'post',
                 data:formData,
                 headers: {
-                    'Content-Type': `multipart/form-data; boundary=${formData._boundary}`
+                    'Content-Type': `multipart/form-data; boundary=${'formData._boundary'}`
                 }
             })
             console.log(response)
@@ -113,9 +134,10 @@ class MovieForm extends React.Component{
         if(this.props.Operation==='delete'){
             const response = await axios({
                 url:'https://quickmovies.herokuapp.com/movie/'+this.state._id,
-
+                // url: 'http://localhost:3001/movie/'+this.state._id,
                 method: 'delete'
             })
+            console.log(response)
         }
 
     }
@@ -221,8 +243,16 @@ class MovieForm extends React.Component{
                     />
                     <button>Submit</button>
                 </form>
-                {/* {this.state.poster && <img src={URL.createObjectURL(this.state.poster)}alt='img' />} */}
+                {this.state.Poster && <img src={this.state.Poster}alt='img' />}
                 {this.state.poster && <img src={this.state.poster} alt='img' />}
+                
+                <div>
+                    <input 
+                        type='search' 
+                        onChange={this.onFindMovieDetails}
+                        placeholder='Enter imdb tt'
+                    />
+                </div>
             </div>
         )
     }

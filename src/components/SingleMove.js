@@ -22,7 +22,8 @@ class SingleMovie extends React.Component{
                 screenshot : this.props.location.state.screenshot,
                 download_link:this.props.location.state.download_link,
                 torrent_link:this.props.location.state.torrent_link,
-                stream_link:this.props.location.state.stream_link
+                stream_link:this.props.location.state.stream_link,
+                Poster : this.props.location.state.Poster
             })
         }
     }
@@ -41,7 +42,7 @@ class SingleMovie extends React.Component{
 
                 <div className='single-movie_details'>
                     <h1 className='des_movie-title'>{this.state.title}</h1>
-                    <MoviePosterRender poster={this.state.poster}/>
+                    <MoviePosterRender poster={this.state.Poster}/>
 
                     <div className='des_movie-details'>
                         <p>IMDb Rating : {this.state.imdb} </p>
@@ -74,20 +75,20 @@ const MoviePosterRender = (props) =>{
     )
 }
 
-const MovieScreenShotRender = (props) =>{
-    return(
-        <div className='des_movie-poster'>
-            <img className='img-2' src={props.screenshot} alt='movie-poster' />
-        </div>
-    )
-}
+// const MovieScreenShotRender = (props) =>{
+//     return(
+//         <div className='des_movie-poster'>
+//             <img className='img-2' src={props.screenshot} alt='movie-poster' />
+//         </div>
+//     )
+// }
 
-const MovieDetalisRender = () =>{
-    return(
-        <div>
+// const MovieDetalisRender = () =>{
+//     return(
+//         <div>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
 export default SingleMovie 

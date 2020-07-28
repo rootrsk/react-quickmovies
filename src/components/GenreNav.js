@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import Container from './Container'
-import GenreMovieHeader from './GenreNavHeader'
 
 
 class GenreNav extends React.Component{
