@@ -1,6 +1,7 @@
 /* Basic  */
 body{
     background-color: #012727;
+    
 }
 div{
     margin: 0px;
@@ -195,6 +196,7 @@ input{
     display: inline;
     text-decoration: none;
     right: 0px;
+    
 }
 .slider-header{
     margin: auto;
@@ -226,10 +228,12 @@ input{
     margin: auto;
 }
 .single-movie_details{
-    background-color: white;
+    background-color: #074444;
+    color: rgb(48, 200, 211);
     max-width: 600px;
     margin: auto;
-    border: 1px solid rgba(232,234,237,1);
+    /* border: 1px solid rgba(232,234,237,1); */
+    border : 1px solid #022222;
     
 } 
 .back-button{
@@ -269,13 +273,16 @@ input{
 .des_movie-details{
     display: block;
     justify-content: center;
-    text-align: justify;
     margin: auto;
     width: 80%;
     max-width: 600px;
     font-weight: bold;
+    margin-bottom: 60px;
 }
-
+.description{
+    text-align: justify;
+    
+}
 
 .admin-movies{
     display: flex;
@@ -283,15 +290,56 @@ input{
     justify-content: center;
 }
 
-/* .bottom{
+.bottom{
     bottom: 3px;
     position: absolute;
-} */
+}
+
+/* Download link */
+.download-link{
+    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.download-link a{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    /* border: 1px solid green; */
+    border-radius: 3px;
+    width: 200px;
+    margin: auto;
+    color: #68f5dd;
+    margin-bottom: 30px;
+    background: #2a976b;
+    box-shadow:0 0 5px #14e290,
+	           0 0 25px #14e290,
+	           0 0 50px #14e290,
+               0 0 200px #14e290;
+    /* -webkit-box-reflect:below 1px linear-gradient(transparent,rgba(11, 22, 24, 0.333)); */
+    letter-spacing: 2px;
+	text-transform: uppercase;
+	overflow: hidden;
+}
 
 
 
-
-
+.active-menu{
+    transition-duration: 2s;
+    
+    color:#050801;
+    border-radius: 5px;
+	box-shadow:0 0 5px #4dff4d,
+	           0 0 25px #4dff4d,
+	           0 0 50px #4dff4d,
+	           0 0 200px #4dff4d;
+    color: green;
+}
 
 
 
@@ -304,10 +352,14 @@ input{
 .form{
     width: 80%;
     margin: auto;
+    background: #2a976b;
     
 }
 .form input,textarea,select{
+    background: #145a3e;
     width: 100%;
+    border:none;
+    margin-bottom: 5px;
 }
 
 

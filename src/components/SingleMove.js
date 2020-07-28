@@ -47,9 +47,9 @@ class SingleMovie extends React.Component{
                         <p>IMDb Rating : {this.state.imdb} </p>
                         <p>Genere : {this.state.genre} </p>
                         <p>Release Date : {this.state.year}</p>
-                        <p>Star Cast : {this.state.starcast}</p>
+                        <p className='description'>Star Cast : {this.state.starcast}</p>
                         <p>Director: {this.state.director}</p>
-                        <p>Description : {this.state.description}</p>
+                        <p className='description'>Description : {this.state.description}</p>
                     </div>
                     
                     <div className='download-link'>
