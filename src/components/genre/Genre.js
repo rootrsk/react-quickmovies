@@ -6,10 +6,15 @@ import { Link } from 'react-router-dom';
 class Genre extends React.Component{
     state={movies:[]}
     componentDidMount = async() =>{
-        const BASE_URL = process.env.BASE_URL || 'https://quickmovies.herokuapp.com/'
-        // const Localhost = 'http://localhost:3001/movies/'
-        const response = await axios(BASE_URL+'movies/'+this.props.genre)
-        this.setState({movies:response.data})
+        try{
+            const BASE_URL = process.env.BASE_URL || 'https://quickmovies.herokuapp.com/'
+            // const Localhost = 'http://localhost:3001/movies/'
+            const response = await axios(BASE_URL+'movies/'+this.props.genre)
+            this.setState({movies:response.data})
+        }catch(e){
+            console.log(e)
+        }
+        
     }
     render(){
         return(

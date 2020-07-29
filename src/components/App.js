@@ -6,6 +6,7 @@ import SingleMovie from './SingleMove'
 import Crud from './cred/Crud'
 import Movies from './cred/Movies';
 import Header from './Header'
+import Search from './cred/Search'
 
 class App extends React.Component{
     render(){
@@ -18,7 +19,8 @@ class App extends React.Component{
                         <Route exact path='/genre/:genre' component={GenreNav}/>
                         <Route  path='/movie/:id' render={(props)=> <SingleMovie  {...props} /> }  />
                         <Route  path='/crud/:operation/:id'  component={Crud}/>
-                        <Route  path='/movies'  component={Movies} />   
+                        <Route  path='/movies'  component={Movies} />
+                        <Route  path='/search' component={Search} />   
                     </Switch>
                 </div>
             </BrowserRouter>

@@ -54,11 +54,13 @@ input{
   
 .header input:active{
     outline: none;
+    padding: 7px;
+    margin: auto;
 }
 .header input:focus{
-    padding: 5px;
+    padding: 7px;
     margin: auto;
-    margin-right: 5px;
+    margin: 5px;
     background-color: teal;
     border: 1px solid #022222;
     color: white;
@@ -225,13 +227,14 @@ input{
 
 .single-movie_main-div{
     margin: 50px 0px 20px 0px;
-    max-width: 600px;
+    /* max-width: 600px; */
+    max-width: 790px;
     margin: auto;
 }
 .single-movie_details{
     background-color: #074444;
     color: rgb(48, 200, 211);
-    max-width: 600px;
+    max-width: 790px;
     margin: auto;
     /* border: 1px solid rgba(232,234,237,1); */
     border : 1px solid #022222;
@@ -248,6 +251,7 @@ input{
     /* border: 1px  solid rgba(232,234,237,1); */
     border: 1px solid #022222;
     margin-bottom: 10px;
+    max-width: 790px;
 } 
 .des_movie-poster{
     background-color: teal;
@@ -276,7 +280,7 @@ input{
     justify-content: center;
     margin: auto;
     width: 80%;
-    max-width: 600px;
+    max-width: 450px;
     font-weight: bold;
     margin-bottom: 60px;
 }
@@ -294,6 +298,13 @@ input{
 .bottom{
     bottom: 3px;
     position: absolute;
+}
+.load_more{
+    font-size: 20px;
+    color: #0feeee;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 /* Download link */
@@ -332,7 +343,6 @@ input{
 
 .active-menu{
     transition-duration: 2s;
-    
     color:#050801;
     border-radius: 5px;
 	box-shadow:0 0 5px #4dff4d,
@@ -341,9 +351,6 @@ input{
 	           0 0 200px #4dff4d;
     color: green;
 }
-
-
-
 
 
 

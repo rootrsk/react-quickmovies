@@ -4,7 +4,6 @@ import React from 'react';
 class SingleMovie extends React.Component{
     state={}
     componentDidMount = async () =>{
-        console.log(this.props)
         if(this.props.location.state){
             console.log(this.props.location.state)
             this.setState({movie:this.props.location})

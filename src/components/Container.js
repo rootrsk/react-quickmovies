@@ -7,7 +7,6 @@ const Container = (props)=>{
         <div className='slides'>
             <div className='slides_inner-div'>
                 <div className='title'>{props.movie.title} </div>
-                {console.log(props.movie)}
                 <Link 
                     
                     to={{
