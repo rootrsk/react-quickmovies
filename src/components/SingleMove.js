@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 
 class SingleMovie extends React.Component{
@@ -57,6 +58,11 @@ class SingleMovie extends React.Component{
                         {this.state.torrent_link && <a href={this.state.torrent_link}>Torrent Link</a>}
                         {this.state.stream_link && <a href={this.state.stream_link}>Stream Link</a>}
                     </div>
+                    <Helmet>
+                        <title>{this.state.title}</title>
+                        <meta name={'keyword'} content={this.state.title} />
+                        <meta name={'description'} content={this.state.title+'quickmovies.xyz'} />
+                    </Helmet>
                 </div>
                 
                 

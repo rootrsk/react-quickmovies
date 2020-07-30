@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchedMovie from './SearchedMovie';
 import Container from '../Container'
+import { Helmet } from 'react-helmet';
 
 
 class Search extends React.Component{
@@ -17,6 +17,10 @@ class Search extends React.Component{
                         }}
                 > &#171;</button>
                 {this.props.history.location.response&&<MovieRender movies={this.props.history.location.response} />}
+                <Helmet>
+                    <title>Search</title>
+                    <meta name='descrption' content='Search all type of movies here.'/>
+                </Helmet>
                 
             </div>
         )

@@ -1,5 +1,6 @@
 import React from 'react';
 import Genre from './genre/Genre'
+import { Helmet } from 'react-helmet';
 
 class HomePage extends React.Component{
     state={movies:[1,2,3,4,5,6,7,8,9,10]}
@@ -21,7 +22,15 @@ class HomePage extends React.Component{
                 <Genre genre={'Romance'} key={Math.random()*100}/>
                 <Genre genre={'Sci-Fi'} key={Math.random()*100}/>
                 <Genre genre={'Thriller'} key={Math.random()*100}/>
+                <div>
+                    <Helmet>
+                        <title>Quickmovies</title>
+                        <meta name='keyword' content='Quickmovies.xyz,Dual audio Movies ' />
+                        <meta name='description' content='All Types Of Moveis Are Available Here' />
+                    </Helmet>
+                </div>
             </div>
+            
         )
     }
 }

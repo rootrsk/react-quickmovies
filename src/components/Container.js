@@ -6,7 +6,7 @@ const Container = (props)=>{
     return(
         <div className='slides'>
             <div className='slides_inner-div'>
-                <div className='title'>{props.movie.title} </div>
+                {/* <div className='title'>{props.movie.title} </div> */}
                 <Link 
                     
                     to={{

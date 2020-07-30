@@ -255,15 +255,17 @@ input{
 } 
 .des_movie-poster{
     background-color: teal;
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 330px;
     margin: auto;
     background-size: contain;
+    
 }
 .des_movie-poster img{
     background-size: contain;
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 .img {
     background-size: cover;

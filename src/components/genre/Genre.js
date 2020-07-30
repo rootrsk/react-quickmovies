@@ -23,11 +23,12 @@ class Genre extends React.Component{
                     <div className='genere'>{this.props.genre}</div>
                     <Link to={'/genre/'+this.props.genre.toLowerCase()} className='view-more'>View More</Link>
                 </div>
-                    <div className='slider'>
-                        {this.state.movies.map((movie)=>{
-                            return <Container movie={movie} key={movie._id}/>
-                        })}
-                    </div>
+                <div className='slider'>
+                    {this.state.movies.map((movie)=>{
+                        return <Container movie={movie} key={movie._id}/>
+                    })}
+                </div>
+                
             </div>
         )
     }
